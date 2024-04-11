@@ -53,9 +53,9 @@ const CartMenu = () => {
           <Box padding="30px" overflow="auto" height="100%">
             {/* HEADER */}
             <FlexBox mb="15px">
-              <Typography variant="h3">SHOPPING BAG ({Cart.length})</Typography>
-              <IconButton> onClick={() => dispatch(setIsCartOpen({}))}
-                  <CloseIcon />
+              <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+              <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
+                  <CloseIcon/>
               </IconButton>
             </FlexBox>
 
@@ -132,8 +132,8 @@ const CartMenu = () => {
                     color: "white",
                     borderRadius: 0,
                     minWidth: "100%",
-                    padding: "20px 40px"
-                    m: "20px 0"
+                    padding: "20px 40px",
+                    margin: "20px 0"
                   }}
                   onClick={() => {
                     navigate("/checkout");

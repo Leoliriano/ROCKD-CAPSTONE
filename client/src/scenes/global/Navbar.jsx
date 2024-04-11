@@ -1,14 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { Badge, Box, IconButton, Menu } from "@mui/material"
+import {useDispatch, useSelector} from 'react-redux'
+import {Badge, Box, IconButton} from "@mui/material"
 import {
     PersonOutline,
     ShoppingBagOutlined,
     MenuOutlined,
     SearchOutlined
 } from '@mui/icons-material';
-import { useNavigate } from "react-router-dom";
-import { shades } from "../../theme";
-import state, { setIsCartOpen } from '../../state';
+import {useNavigate} from "react-router-dom";
+import {shades} from "../../theme";
+import {setIsCartOpen} from '../../state';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -48,10 +48,10 @@ const Navbar = () => {
                 columnGap="20px"
                 zIndex="2"
             >
-                <IconButton sx={{ color: "black" }}>
+                <IconButton sx={{color: "black"}}>
                     <SearchOutlined />
                 </IconButton>
-                <IconButton sx={{ color: "black" }}>
+                <IconButton sx={{color: "black"}}>
                     <PersonOutline />
                 </IconButton>
                 <Badge
@@ -70,11 +70,11 @@ const Navbar = () => {
                     >
                 <IconButton 
                 onClick={() => dispatch(setIsCartOpen({}))}
-                 sx={{ color: "black" }}>
+                 sx={{color: "black"}}>
                     <ShoppingBagOutlined />
                 </IconButton>
                 </Badge>
-                <IconButton sx={{ color: "black" }}>
+                <IconButton sx={{color: "black"}}>
                     <MenuOutlined />
                 </IconButton>
 
